@@ -1,0 +1,13 @@
+{
+  "name": "fooz",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "scripts": {
+    "dev": "tailwindcss -i ./src/css/input.css -o ./dist/app.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./dist/app.css --minify"
+  }
+}

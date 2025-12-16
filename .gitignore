@@ -1,0 +1,22 @@
+# === System / IDE ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# === Node / build ===
+node_modules/
+
+# === Env / secrets ===
+.env
+.env.*
+
+# === Temporary / cache ===
+.cache/
+.tmp/
+.temp/
+
+# === OS ===
+*.swp
+*~
