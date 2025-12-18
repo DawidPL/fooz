@@ -1,0 +1,30 @@
+.fooz-faq {
+  counter-reset: fooz-faq-counter;
+}
+
+.fooz-faq__item {
+  counter-increment: fooz-faq-counter;
+}
+
+.fooz-faq__summary::-webkit-details-marker { display: none; }
+.fooz-faq__summary::marker { content: ""; }
+
+/* Number before question */
+.fooz-faq__summary::before {
+  content: counter(fooz-faq-counter) ".";
+  font-variant-numeric: tabular-nums;
+}
+
+.fooz-faq__summary::after {
+  content: "";
+  margin-left: auto;
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  background-image: url("../icons/plus-large-svgrepo-com.svg");
+}
+
+.fooz-faq__details[open] .fooz-faq__summary::after {
+  background-image: url("../icons/minus-svgrepo-com.svg");
+}
