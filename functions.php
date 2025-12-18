@@ -46,8 +46,36 @@ add_action('wp_enqueue_scripts', function () {
     [],                                           
     filemtime($path),                             
     [
-      'in_footer' => true,                        
-      'strategy'  => 'defer',                     
+      'in_footer' => true,   
+      'strategy'  => 'defer',
     ]
   );
+  
+  // AJAX data for single book
+  if ( is_singular('book') ) {
+    wp_add_inline_script(
+      'fooz-scripts',
+      'window.FOOZ_LIBRARY = ' . wp_json_encode([
+        'ajaxUrl'    => admin_url('admin-ajax.php'),
+        'action'     => 'fooz_library_latest_books',
+        'nonce'      => wp_create_nonce('fooz_library_latest_books'),
+        'currentId'  => get_queried_object_id(),
+      ]) . ';',
+      'before'
+    );
+  }
+  
 }, 20);
+
+// set pagination for taxonomy
+add_action('pre_get_posts', function (WP_Query $q) {
+  if (is_admin() || ! $q->is_main_query()) {
+    return;
+  }
+
+  // taxonomy archive for genre
+  if ($q->is_tax('genre')) {
+    $q->set('post_type', ['book']);
+    $q->set('posts_per_page', 5);
+  }
+});
