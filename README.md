@@ -25,8 +25,9 @@ Implementation of required tasks on top of the Twenty Twenty-Five block theme.
 - Numeric order via CSS counters
 
 ## Setup
-1. Activate child theme: `fooz`
-2. Activate plugins:
+1. Copy plugins into `wp-content/plugins`
+2. Activate child theme: `fooz`
+3. Activate plugins:
    - Fooz Library
    - Fooz FAQ
 
