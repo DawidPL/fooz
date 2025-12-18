@@ -1,17 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./**/*.php",
-    "./**/*.html",
-    "./**/*.js",
-    "./**/*.jsx",
-    "./**/*.ts",
-    "./**/*.tsx",
-
-    //Site Editor
+    // Theme
+    "./**/*.{php,html,js,jsx,ts,tsx}",
     "./templates/**/*.html",
-    "./parts/**/*.html",
-    "./patterns/**/*.php",
+
+    // Plugins 
+    "../plugins/fooz-faq/**/*.{php,html,js,jsx,ts,tsx}",
+    "../plugins/fooz-library/**/*.{php,html,js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {},

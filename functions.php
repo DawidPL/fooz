@@ -5,7 +5,10 @@
 
 */
 
-// load tailwind cdn
+
+
+// load tailwind cdn for dev
+/*
 add_action('wp_enqueue_scripts', function () {
   wp_enqueue_script(
     'tailwindcdn',
@@ -15,6 +18,8 @@ add_action('wp_enqueue_scripts', function () {
     false
   );
 }, 5);
+*/
+
 
 // enqueue tailwind css 
 add_action('wp_enqueue_scripts', function () {
