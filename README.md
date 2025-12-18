@@ -18,12 +18,11 @@ Implementation of required tasks on top of the Twenty Twenty-Five block theme.
 - `taxonomy-genre.html` - genre archive with pagination
 - Latest Books list on single book loaded via AJAX (JSON)
 
-**FAQ Block (plugin: fooz-faq-block)**
+**FAQ Block (plugin: fooz-faq)**
 - Custom Gutenberg block: FAQ Accordion
 - InnerBlocks for multiple Q&A items
 - Accordion based on `<details>/<summary>`
 - Numeric order via CSS counters
-- Simple responsive layout
 
 ## Setup
 1. Activate child theme: `fooz`
